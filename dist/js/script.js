@@ -47,9 +47,8 @@ darkToggle.addEventListener("click", function () {
 });
 
 // pindahkan posisi toggle sesuai mode
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-  darkToggle.checked = "true";
+  darkToggle.checked = true;
 } else {
-  darkToggle.checked = "false";
+  darkToggle.checked = false;
 }
